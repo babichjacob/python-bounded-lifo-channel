@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "babichjacob-lifo-channel"
+version = "0.1.0"
+description = "A Python implementation of tokio::sync::mpsc::channel but LIFO instead of FIFO"
+license = "MIT"
+authors = ["J or Jacob Babich <jacobbabichpublic+git@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/babichjacob/python-lifo-channel"
+packages = [{include = "bounded_lifo_channel"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+babichjacob-option-and-result = "^0.1.2"
+
+[tool.poetry.dev-dependencies]
+black = "^22.12.0"
+mypy = "^0.991"
+pylint = "^2.15.10"
+
+[tool.poetry.group.test.dependencies]
+python = ">=3.11"
+pytest = "^6"
+pytest-asyncio = "^0.20.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
